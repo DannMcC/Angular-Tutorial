@@ -1,4 +1,4 @@
-System.register(['angular2/core', './course.service', './auto-grow.directive'], function(exports_1, context_1) {
+System.register(['angular2/core', './course.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, course_service_1, auto_grow_directive_1;
+    var core_1, course_service_1;
     var CoursesComponent;
     return {
         setters:[
@@ -19,9 +19,6 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
             },
             function (course_service_1_1) {
                 course_service_1 = course_service_1_1;
-            },
-            function (auto_grow_directive_1_1) {
-                auto_grow_directive_1 = auto_grow_directive_1_1;
             }],
         execute: function() {
             let CoursesComponent = class CoursesComponent {
@@ -36,15 +33,13 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
                     template: `
         <h2>Courses</h2>
         {{ title }}
-        <input type="text" autoGrow />
         <ul>
             <li *ngFor="#course of courses">
             {{ course }}
             </li>
         </ul>
         `,
-                    providers: [course_service_1.CourseService],
-                    directives: [auto_grow_directive_1.AutoGrowDirective]
+                    providers: [course_service_1.CourseService]
                 }), 
                 __metadata('design:paramtypes', [course_service_1.CourseService])
             ], CoursesComponent);
@@ -52,4 +47,4 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
         }
     }
 });
-//# sourceMappingURL=courses.compoent.js.map
+//# sourceMappingURL=courses.component.js.map
