@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.compoent'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,29 +10,37 @@ System.register(['angular2/core', './courses.compoent'], function(exports_1, con
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_compoent_1;
-    var AppComponent;
+    var core_1;
+    var CoursesComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (courses_compoent_1_1) {
-                courses_compoent_1 = courses_compoent_1_1;
             }],
         execute: function() {
-            let AppComponent = class AppComponent {
+            let CoursesComponent = class CoursesComponent {
+                constructor() {
+                    this.title = "The title of the courses page";
+                    this.courses = ["Course1", "Course2", "Course3"];
+                }
             };
-            AppComponent = __decorate([
+            CoursesComponent = __decorate([
                 core_1.Component({
-                    selector: 'my-app',
-                    template: '<h1>Hello Angular</h1><courses></courses>',
-                    directives: [courses_compoent_1.CoursesComponent]
+                    selector: 'courses',
+                    template: `
+        <h2>Courses</h2>
+        {{ title }}
+        <ul>
+            <li *ngFor="#course of courses">
+            {{ course }}
+            </li>
+        </ul>
+        `
                 }), 
                 __metadata('design:paramtypes', [])
-            ], AppComponent);
-            exports_1("AppComponent", AppComponent);
+            ], CoursesComponent);
+            exports_1("CoursesComponent", CoursesComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=courses.compoent.js.map
