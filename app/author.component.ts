@@ -7,7 +7,7 @@ import { AuthorService} from './author.service';
     <h2>Authors</h2>
     {{ title }}
     <ul>
-        <li *ngFor="#author of authors">
+        <li class="list-group-item list-group-item-action" *ngFor="#author of authors">
         {{ author }}
         </li>
     </ul>

@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.compoent', './author.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.compoent', './author.component', './footer.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.compoent', './author.component'], f
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_compoent_1, author_component_1;
+    var core_1, courses_compoent_1, author_component_1, footer_component_1;
     var AppComponent;
     return {
         setters:[
@@ -22,6 +22,9 @@ System.register(['angular2/core', './courses.compoent', './author.component'], f
             },
             function (author_component_1_1) {
                 author_component_1 = author_component_1_1;
+            },
+            function (footer_component_1_1) {
+                footer_component_1 = footer_component_1_1;
             }],
         execute: function() {
             let AppComponent = class AppComponent {
@@ -29,8 +32,18 @@ System.register(['angular2/core', './courses.compoent', './author.component'], f
             AppComponent = __decorate([
                 core_1.Component({
                     selector: 'my-app',
-                    template: '<h1>Hello Angular</h1><courses></courses><authors></authors>',
-                    directives: [courses_compoent_1.CoursesComponent, author_component_1.AuthorComponent],
+                    template: `
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1>Hello Angular</h1>
+            </div>
+        </div>
+    </nav>
+    <courses></courses>
+    <authors></authors>
+    <footer></footer>`,
+                    directives: [courses_compoent_1.CoursesComponent, author_component_1.AuthorComponent, footer_component_1.FooterComponent],
                 }), 
                 __metadata('design:paramtypes', [])
             ], AppComponent);

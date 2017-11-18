@@ -9,7 +9,7 @@ import { AutoGrowDirective } from './auto-grow.directive'
         {{ title }}
         <input type="text" autoGrow />
         <ul>
-            <li *ngFor="#course of courses">
+            <li class="list-group-item list-group-item-action" *ngFor="#course of courses">
             {{ course }}
             </li>
         </ul>

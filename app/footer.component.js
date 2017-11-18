@@ -1,4 +1,4 @@
-System.register(['angular2/core', './author.service'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,41 +10,29 @@ System.register(['angular2/core', './author.service'], function(exports_1, conte
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, author_service_1;
-    var AuthorComponent;
+    var core_1;
+    var FooterComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (author_service_1_1) {
-                author_service_1 = author_service_1_1;
             }],
         execute: function() {
-            let AuthorComponent = class AuthorComponent {
-                constructor(authorService) {
-                    this.title = "The Authors of the courses";
-                    this.authors = authorService.getAuthors();
+            let FooterComponent = class FooterComponent {
+                constructor() {
+                    this.title = "footer";
                 }
             };
-            AuthorComponent = __decorate([
+            FooterComponent = __decorate([
                 core_1.Component({
-                    selector: 'authors',
-                    template: `
-    <h2>Authors</h2>
-    {{ title }}
-    <ul>
-        <li class="list-group-item list-group-item-action" *ngFor="#author of authors">
-        {{ author }}
-        </li>
-    </ul>
-    `,
-                    providers: [author_service_1.AuthorService]
+                    selector: 'footer',
+                    template: '<span class="text-muted">Thanks for visiting!</span>',
+                    host: { 'class': 'footer navbar-fixed-bottom' }
                 }), 
-                __metadata('design:paramtypes', [author_service_1.AuthorService])
-            ], AuthorComponent);
-            exports_1("AuthorComponent", AuthorComponent);
+                __metadata('design:paramtypes', [])
+            ], FooterComponent);
+            exports_1("FooterComponent", FooterComponent);
         }
     }
 });
-//# sourceMappingURL=author.component.js.map
+//# sourceMappingURL=footer.component.js.map
