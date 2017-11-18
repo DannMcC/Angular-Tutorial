@@ -26,7 +26,16 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             FooterComponent = __decorate([
                 core_1.Component({
                     selector: 'footer',
-                    template: '<span class="text-muted">Thanks for visiting!</span>',
+                    template: `
+    <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
+                        © 2017, Dan McCune, All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>`,
                     host: { 'class': 'footer navbar-fixed-bottom' }
                 }), 
                 __metadata('design:paramtypes', [])

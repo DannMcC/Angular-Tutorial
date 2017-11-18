@@ -37,12 +37,13 @@ System.register(['angular2/core', './course.service', './auto-grow.directive'], 
         <h2>Courses</h2>
         {{ title }}
         <input type="text" autoGrow />
-        <ul>
+        <ul class="col-sm-4">
             <li class="list-group-item list-group-item-action" *ngFor="#course of courses">
             {{ course }}
             </li>
         </ul>
         `,
+                    host: { 'class': 'col-sm-4' },
                     providers: [course_service_1.CourseService],
                     directives: [auto_grow_directive_1.AutoGrowDirective]
                 }), 

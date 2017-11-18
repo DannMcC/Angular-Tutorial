@@ -33,7 +33,7 @@ System.register(['angular2/core', './author.service'], function(exports_1, conte
                     template: `
     <h2>Authors</h2>
     {{ title }}
-    <ul>
+    <ul class="col-sm-4">
         <li class="list-group-item list-group-item-action" *ngFor="#author of authors">
         {{ author }}
         </li>

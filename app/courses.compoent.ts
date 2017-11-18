@@ -8,12 +8,13 @@ import { AutoGrowDirective } from './auto-grow.directive'
         <h2>Courses</h2>
         {{ title }}
         <input type="text" autoGrow />
-        <ul>
+        <ul class="col-sm-4">
             <li class="list-group-item list-group-item-action" *ngFor="#course of courses">
             {{ course }}
             </li>
         </ul>
         `,
+    host: {'class' : 'col-sm-4'},
     providers: [CourseService],
     directives: [AutoGrowDirective]
 })
